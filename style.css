@@ -1,3 +1,6 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 body {
     background-color: rgb(245, 245, 245);
     font-family: 'Benne', serif;
@@ -10,6 +13,10 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
 }
+
+aside h2 {
+    margin-top: .5rem;
+}
 address {
     text-align: right;
     line-height: 10%;
@@ -18,7 +25,104 @@ address {
 address p:first-child {
     font-size: 1.25rem;
 }
+address {
+    font-style: normal;
+}
+
+blockquote {
+    padding: 2rem;
+    font-size: 3rem;
+    border-right: solid 1px rgb(215, 215, 215);
+    border-left: solid 1px rgb(215, 215, 215);
+
+}
+
+mark {
+    background-color: transparent;
+    transition: background-color .5s;
+
+}
+
+blockquote:hover mark{
+    background-color: rgb(255, 200, 20);
+    transition: background-color .5s;
+}
+
+summary:hover {
+    color: blue;
+}
+
+strong {
+    color: black;
+    font-style: normal;
+}
+
+article {
+    width: 100%;
+}
+
+article main {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    place-content: center;
+}
+
 dl, details {
     color: rgb(112, 112, 112);
 
+}
+
+dl, dt, dd {
+    padding: 0;
+    margin: 0
+}
+
+dl {
+    width: 50%;
+    overflow: hidden;
+    padding-top: 1rem;
+}
+
+dt {
+    float: left;
+    width: 15%;
+}
+
+dd {
+    float: left;
+    width: 85%;
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    max-width: 1087px;
+    max-height: 657px; 
+}
+
+
+
+@media only screen and (max-width: 1000px)  {
+    img {
+        width: 100%;
+        height: 100%;
+        max-width: 1087px;
+        max-height: 657px; 
+    }
+
+    dl {
+        width: 100%;
+    }
+
+    blockquote {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
 }
