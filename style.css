@@ -50,6 +50,7 @@ blockquote {
 mark {
     background-color: transparent;
     transition: background-color .5s;
+    color: var(--text-color);
 
 }
 
